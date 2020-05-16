@@ -4,5 +4,9 @@ services:
     build: ~/workspace/simple-python-example/ 
     ports:
       - "5000:5000"
+    volumes:
+      - ~/workspace/simple-python-example/:/code
+    environment:
+      FLASK_ENV: development
   redis:
     image: "redis:alpine"
